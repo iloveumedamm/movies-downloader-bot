@@ -3,13 +3,17 @@ from io import BytesIO
 from queue import Queue
 import requests
 from flask import Flask, request
+from pyrogram import Client, filters
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryHandler, Dispatcher
+from telegram.ext import CommandHandler, MessageHandler, CallbackQueryHandler
+#from telegram.ext import Dispatcher
+#from telegram import Dispatcher
+
 from movies_scraper import search_movies, get_movie
 
 
-TOKEN = os.getenv("TOKEN")
-URL = os.getenv("URL")
+TOKEN = os.getenv("TOKEN", "6514010635:AAFExy5qQSAx7W4bwFHd5FqzrMVoRz1naTI")
+URL = os.getenv("URL", "https://movies-downloader-bot-wine.vercel.app")
 bot = Bot(TOKEN)
 
 
