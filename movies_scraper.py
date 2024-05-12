@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+from urllib.parse import quote
 
 url_list = {}
 api_key = "bdea4829ff69c3da46e04cf64b2302f1923f6b9c"
