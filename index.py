@@ -1,5 +1,4 @@
 import os
-from urllib.parse import quote
 from io import BytesIO
 from queue import Queue
 import requests
