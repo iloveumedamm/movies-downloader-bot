@@ -5,9 +5,10 @@ import requests
 from flask import Flask, request
 from pyrogram import Client, filters
 from telegram import Bot, Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CommandHandler, MessageHandler, CallbackQueryHandler
+from telegram.ext import CommandHandler, MessageHandler, CallbackQueryHandler, Dispatcher
 #from telegram.ext import Dispatcher
 #from telegram import Dispatcher
+from telegram.ext import Filters
 
 from movies_scraper import search_movies, get_movie
 
